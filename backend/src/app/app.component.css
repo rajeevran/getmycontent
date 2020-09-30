@@ -1,0 +1,10 @@
+.nav-header .brand-logo a {
+    padding: 0px !important;
+    margin: 11px 28px !important;
+}
+
+[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .brand-logo a b img {
+    /* margin-top: 0.4375rem; */
+    margin: -22px;
+    margin-top: 11px;
+}

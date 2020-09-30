@@ -1,0 +1,148 @@
+<div class="row px-2 text-center" >
+
+    <!-- WHEN ACCOUNT VERIFICATION SUCCESSFULLY DONE SHOW THIS DIV -->
+
+    <div class="col-lg-2 col-sm-2 col-md-2 col-12  " *ngIf="showActivediv">
+    </div>
+
+    <div class="col-lg-8 col-sm-8 col-md-8 col-12  " *ngIf="showActivediv">
+        <div class="card " >
+           
+            <div class="card-body">
+                <img src="./assets/images/used_Images/right sign.png"
+                    height="200px"
+                    width="200px"
+                >
+              <h2 class=" h2">Account Activated Successfully !</h2>
+
+              <p class="card-text">Congratulations ! your Fit Trip account has been verified .Your account is now active. <br>
+                Please user our mobile app to login to your account.</p>
+              <a href="javascript:void(0)" class="btn btn-success w-100 text-white">Open Fit Trip app</a>
+            </div>
+          </div>
+
+      
+    </div>
+
+    <div class="col-lg-2 col-sm-2 col-md-2 col-12  " *ngIf="showActivediv">
+    </div>
+
+    <!-- WHEN ACCOUNT VERIFICATION SUCCESSFULLY DONE SHOW THIS DIV END  -->
+
+
+
+    <!-- WHEN ERROR OCCURED SHOW THIS DIV -->
+
+    <div class="col-lg-2 col-sm-2 col-md-2 col-12  "  *ngIf="showerrorDiv">
+    </div>
+
+    <div class="col-lg-8 col-sm-8 col-md-8 col-12  " *ngIf="showerrorDiv">
+        <div class="card " >
+           
+            <div class="card-body">
+                <img src="./assets/images/used_Images/wrongcross.png"
+                    height="200px"
+                    width="200px"
+                 >
+              <h2 class=" h2">Account is not activated please try again !</h2>
+
+              <p class="card-text">something went wrong !! Please click on resend verification link in the Fit Trip app then a new verification email you will send again <br>
+                                    </p>
+              <a href="javascript:void(0)" class="btn btn-success w-100 text-white">Open Fit Trip app</a>
+            </div>
+          </div>
+
+      
+    </div>
+
+    <div class="col-lg-2 col-sm-2 col-md-2 col-12  "  *ngIf="showerrorDiv">
+    </div>
+
+    <!--  ERROR OCCURED SHOW THIS DIV -->
+
+
+
+
+
+    <!-- WHEN ACCOUNT ALREADY VERIFIED SHOW THIS DIV -->
+
+    <div class="col-lg-12 col-sm-12 col-md-12 col-12  alert alert-success" *ngIf="showEmailAlreadyVerified">
+        <div class="card " >
+          
+              <h2 class=" h2">Your account already verified !</h2>
+
+              <p class="card-text">your account is  already verified and is in active mode  <br>
+                Please user our mobile app to login to your account.</p>
+        </div>
+    </div>
+
+    <!--  ALREADY VERIFIED  DIV END-->
+
+
+    <!-- WHEND EMAIL VERIFICATION LINK IS EXPIRED -->
+
+    <div class="col-lg-12 col-sm-12 col-md-12 col-12 alert alert-danger " *ngIf="showExpireLinkDiv" >
+
+        <h2 class=" h2">Email verification link expired !</h2>
+
+
+        <p > To get the new verification link go to our app and choose the option "Resend verification email"</p>
+
+    </div>
+    <!-- EXPIRED LINK DIV END -->
+
+
+    <!-- THIS IS COMMON FOOTER  -->
+
+    <div class="col-lg-12 col-sm-12 col-md-12 col-12 " *ngIf="footerDiv">
+
+        <h4 style="font-family:Comic Sans, Comic Sans MS, cursive;">Stay in touch</h4>
+
+        
+        <a href="https://www.facebook.com/">
+        <img src="./assets/images/used_Images/fblogo.png"
+             height="43px"
+             width="43px"
+        >
+        </a>
+        <a href="https://twitter.com/tweeter">
+        <img src="./assets/images/used_Images/tweeter.png"
+            height="55px"
+            width="55px"
+        >
+        </a>
+        <a href="mailto:jayantakarmakar03@gmail.com">
+        <img src="./assets/images/used_Images/gmail.png"
+             height="43px"
+             width="43px"
+        >
+        </a>
+
+        <br>
+        <p>
+            <i class="fa fa-copyright"></i>2020 BrainiumInfotec,Inc. All rights reserved
+        </p>
+        
+
+     </div>
+    <!-- THIS IS COMMON FOOTER   END-->
+
+
+</div>
+
+
+
+<!--*******************
+        Preloader start
+********************-->
+<div id="preloader" *ngIf="loader">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+        </svg>
+    </div>
+</div>
+<!--*******************
+Preloader end
+********************  -->   
+

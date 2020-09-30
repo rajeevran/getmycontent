@@ -1,0 +1,101 @@
+<div class="login-form-bg h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-xl-6">
+                <div class="form-input-content">
+                    <div class="card login-form mb-0 mt-5">
+                        <div class="card-body pt-5 " >
+                            <a class="text-center" href="index.html"> <h3 class='text-primary'>Get My Content Admin Login</h3></a>
+    
+                            <form class="mt-5 mb-5 login-input">
+                                <div class="form-group">
+                                    <input type="email" 
+                                           class="form-control"  
+                                           placeholder="Enter User ID"
+                                           [(ngModel)]="loginData.email" 
+                                           name="email"
+                                           style="background: #1a15e426;color: #000000;padding-left: 13px;"> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" 
+                                            class="form-control" 
+                                            placeholder="Enter Password"
+                                            [(ngModel)]="loginData.password" 
+                                            name="password"
+                                            style="background: #1a15e426;color: #000000;padding-left: 13px;">
+                                </div>
+                                <!-- <button class="btn login-form__btn submit w-100" href="javascript:void(0)" >Sign In</button> -->
+                                <a class="btn  login-form__btn submit w-100" href="javascript:void(0)"  (click)=doLogin() >Sign In</a>
+
+                            </form>
+                            <p class="mt-5 login-form__footer"> Forgot Password ? 
+                                <a href="javascript:void(0)" 
+                                   class="text-primary"  
+                                   href="#forgotpasswordmodal" data-toggle="modal"
+                                >Click Here</a> now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="forgotpasswordmodal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center" >
+                    Forgot password
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+              
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Enter Email</label>
+                            
+                            <input type="email" 
+                            class="form-control"  
+                            [(ngModel)]="forgotpwd_email" 
+                            name="email"
+                            style="background: #1a15e426;color: #000000;padding-left: 13px;"> 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" (click)="forgotpassLinksend()" class="btn btn-primary">
+                    Reset Password
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--*******************
+        Preloader start
+********************-->
+    <div id="preloader" *ngIf="loader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+<!--*******************
+    Preloader end
+********************  -->   
